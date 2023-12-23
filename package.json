@@ -1,0 +1,17 @@
+{
+  "name": "rtsp-recorder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Kacper Marcinkiewicz",
+  "license": "MIT",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7",
+    "rtsp-video-recorder": "^2.2.0"
+  }
+}
