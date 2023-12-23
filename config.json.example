@@ -1,7 +1,6 @@
 {
     "rtspUrl": "rtsp://admin:passwd@192.168.1.12/h264/main/av_stream",
     "recordingsDirectory": "recordings",
-    "title": "Test",
     "diskSpaceThresholdMb": 10000,
     "segmentTimeSeconds": 60
 }
