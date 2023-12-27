@@ -16,8 +16,9 @@ To use the script, create a `config.json` file with the following parameters (ba
 
 - **rtspUrl:** The RTSP stream URL.
 - **recordingsDirectory:** The base directory where recordings are saved.
-- **segmentTimeSeconds:** The duration of each recording segment in seconds.
 - **diskSpaceThresholdMb:** The maximum size of the recording directory in megabytes. After the directory exceeds this size, the script will delete the oldest recordings to free up space.
+- **segmentTimeSeconds:** The duration of each recording segment in seconds.
+- **timeZone:** The time zone used to name the recordings (list of time zones: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 Example `config.json`:
 
@@ -26,7 +27,8 @@ Example `config.json`:
     "rtspUrl": "rtsp://admin:passwd@192.168.1.12/h264/main/av_stream",
     "recordingsDirectory": "recordings",
     "diskSpaceThresholdMb": 10000,
-    "segmentTimeSeconds": 60
+    "segmentTimeSeconds": 60,
+    "timeZone": "Europe/Warsaw"
 }
 ```
 

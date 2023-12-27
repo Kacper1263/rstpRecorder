@@ -1,6 +1,7 @@
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs-extra');
 const path = require('path');
+const moment = require('moment-timezone');
 
 const configPath = 'config.json';
 if (!fs.existsSync(configPath)) {
@@ -25,9 +26,10 @@ startRecording();
 monitorDiskSpace();
 
 function startRecording() {
-    const startTimestamp = new Date();
-    const dateFolder = startTimestamp.toISOString().split('T')[0].replace(/-/g, '.');
-    const timeFilename = startTimestamp.toISOString().split('T')[1].split('.')[0].replace(/:/g, '-');
+    const localTimeZone = config.timeZone || 'Europe/Warsaw';
+    const startTimestamp = moment().tz(localTimeZone);
+    const dateFolder = startTimestamp.format('YYYY.MM.DD');
+    const timeFilename = startTimestamp.format('HH-mm-ss');
 
     const recordingsDirectory = path.join(baseRecordingsDirectory, dateFolder);
 

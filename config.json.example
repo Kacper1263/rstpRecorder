@@ -2,6 +2,7 @@
     "rtspUrl": "rtsp://admin:passwd@192.168.1.12/h264/main/av_stream",
     "recordingsDirectory": "recordings",
     "diskSpaceThresholdMb": 10000,
-    "segmentTimeSeconds": 60
+    "segmentTimeSeconds": 60,
+    "timeZone": "Europe/Warsaw"
 }
   
