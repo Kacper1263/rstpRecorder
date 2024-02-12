@@ -54,7 +54,8 @@ function startRecording() {
             }, 50);
         })
         .on('error', (err) => {
-            console.error('Error during recording:', err);
+            var errorMessage = err.message.replace(rtspUrl, '***URL REMOVED***');
+            console.error('Error during recording:', errorMessage);
             setTimeout(() => {
                 startRecording();
             }, 50);
